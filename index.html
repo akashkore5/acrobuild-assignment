@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+     <meta charset="UTF-8">
+    <title> Acrobuild Assignment </title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Boxicons CDN Link -->
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+
+    <script src="script.js"></script>
+    <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+  <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js'></script>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="sidebar">
+    <ul class="nav-list">
+     <li>
+      <a href="#">
+        <i ><img src="profile.jpg" alt="profileImg"></i>
+        <span class="links_name">Home</span>
+      </a>
+    </li>
+      <li>
+       <a href="#">
+         <i class='bx bx-user' ></i>
+         <span class="links_name">User</span>
+       </a>
+       <span class="tooltip">User</span>
+     </li>
+     <li>
+       <a href="#">
+         <i style="color: rgb(0, 125, 241); " class='bx bx-chat' ></i>
+         <span class="links_name">Form</span>
+       </a>
+       <span class="tooltip">Form</span>
+     </li>
+     <li class="profile">
+         <i class='bx bx-log-out' id="log_out" ></i>
+     </li>
+    </ul>
+  </div>
+  <section class="home-section">
+    <div class="top-menu">
+      <p>
+        This is top menu
+      </p><p>
+        This is top menu
+      </p><p>
+        This is top menu
+      </p>
+    </div>
+    <div class="content">
+      <section class="signup-step-container">
+          <div class="container">
+              <div class="row d-flex justify-content-center">
+                  <div class="col-md-8">
+                      <div class="wizard">
+                          <div class="wizard-inner">
+                              <div class="connecting-line"></div>
+                              <ul class="nav nav-tabs" role="tablist">
+                                  <li role="presentation" class="active">
+                                      <a href="#" data-toggle="tab" aria-controls="step1" role="tab" aria-expanded="true"><span class="round-tab">1 </span></a>
+                                  </li>
+                                  <li role="presentation" class="disabled">
+                                      <a href="#" data-toggle="tab" aria-controls="step2" role="tab" aria-expanded="false"><span class="round-tab">2</span></a>
+                                  </li>
+                                  <li role="presentation" class="disabled">
+                                      <a href="#" data-toggle="tab" aria-controls="step3" role="tab"><span class="round-tab">3</span></a>
+                                  </li>
+                                  <li role="presentation" class="disabled">
+                                      <a href="#" data-toggle="tab" aria-controls="step4" role="tab"><span class="round-tab">4</span></a>
+                                  </li>
+                              </ul>
+                          </div>
+          
+                          <form role="form" action="index.html" class="login-box">
+                              <div class="tab-content" id="main_form">
+                                  <div class="tab-pane active step" role="tabpanel" id="step1">
+                                      <h5>Basic Details</h5>
+                                      <div class="contentBox">
+                                          <div class="row">
+                                              <div class="col-md-4">
+                                                  <div class="form-group">
+                                                      <label>Project Name *</label> 
+                                                      <input class="form-control" type="text" name="name" placeholder=""> 
+                                                  </div>
+                                              </div>
+                                              <div class="col-md-4">
+                                                  <div class="form-group">
+                                                      <label>Project Code *</label> 
+                                                      <input class="form-control" type="text" name="name" placeholder=""> 
+                                                  </div>
+                                              </div>
+                                              <div class="col-md-4">
+                                                  <div class="form-group">
+                                                      <label>Password *</label> 
+                                                      <input class="form-control" type="password" name="name" placeholder=""> 
+                                                  </div>
+                                              </div>
+                                              <div class="col-md-4">
+                                                  <div class="form-group">
+                                                      <label>Project Start Date*</label> 
+                                                      <input class="form-control" type="date" name="name" placeholder=""> 
+                                                  </div>
+                                              </div>
+                                              
+                                              <div class="col-md-4">
+                                                  <div class="form-group">
+                                                      <label>Project End Date</label> 
+                                                      <input class="form-control" type="date" name="name" placeholder=""> 
+                                                  </div>
+                                              </div>
+                                          </div>
+
+                                      </div>
+                                      
+                                      <ul class="list-inline pull-right">
+                                          <li><button type="button" onclick="nextPrev(1)" class="default-btn next-step">Next Step</button></li>
+                                      </ul>
+                                  </div>
+                                  <div class="tab-pane step" role="tabpanel" id="step2">
+                                      <h4 class="text-center">Step 2</h4>
+                                      <div class="row">
+                                      <div class="col-md-6">
+                                          <div class="form-group">
+                                              <label>Address 1 *</label> 
+                                              <input class="form-control" type="text" name="name" placeholder=""> 
+                                          </div>
+                                      </div>
+                                      
+                                      <div class="col-md-6">
+                                          <div class="form-group">
+                                              <label>City / Town *</label> 
+                                              <input class="form-control" type="text" name="name" placeholder=""> 
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <div class="form-group">
+                                              <label>Country *</label> 
+                                              <select name="country" class="form-control" id="country">
+                                                  <option value="NG" selected="selected">India</option>
+                                                  <option value="NU">Bhutan</option>
+                                                  <option value="NF">Nepal</option>
+                                                  <option value="KP">North Korea</option>
+                                                  <option value="MP">Bangladesh</option>
+                                                  <option value="NO">sri lanka</option>
+                                              </select>
+                                          </div>
+                                      </div>
+                                      
+                                      
+                                      
+                                      <div class="col-md-6">
+                                          <div class="form-group">
+                                              <label>Registration No.</label> 
+                                              <input class="form-control" type="text" name="name" placeholder=""> 
+                                          </div>
+                                      </div>
+                                     </div>
+                                      
+                                      
+                                      <ul class="list-inline pull-right">
+                                          <li><button type="button" onclick="nextPrev(-1)" class="default-btn prev-step">Back</button></li>
+                                          <!-- <li><button type="button" class="default-btn next-step skip-btn">Skip</button></li> -->
+                                          <li><button type="button" onclick="nextPrev(1)" class="default-btn next-step">Continue</button></li>
+                                      </ul>
+                                  </div>
+                                  <div class="tab-pane step" role="tabpanel" id="step3">
+                                      <h4 class="text-center">Step 3</h4>
+                                       <div class="row">
+                                      <div class="col-md-6">
+                                          <div class="form-group">
+                                              <label>Account Name *</label> 
+                                              <input class="form-control" type="text" name="name" placeholder=""> 
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <div class="form-group">
+                                              <label>Demo</label> 
+                                              <input class="form-control" type="text" name="name" placeholder=""> 
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <div class="form-group">
+                                              <label>Inout</label> 
+                                              <input class="form-control" type="text" name="name" placeholder=""> 
+                                          </div>
+                                      </div>
+                                      <!-- <div class="col-md-6">
+                                          <div class="form-group">
+                                              <label>Information</label> 
+                                              <div class="custom-file">
+                                                <input type="file" class="custom-file-input" id="customFile">
+                                                <label class="custom-file-label" for="customFile">Select file</label>
+                                              </div>
+                                          </div>
+                                      </div> -->
+                                      <div class="col-md-6">
+                                          <div class="form-group">
+                                              <label>Number *</label> 
+                                              <input class="form-control" type="text" name="name" placeholder=""> 
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6">
+                                          <div class="form-group">
+                                              <label>Input Number</label> 
+                                              <input class="form-control" type="text" name="name" placeholder=""> 
+                                          </div>
+                                      </div>
+                                         </div>
+                                      <ul class="list-inline pull-right">
+                                          <li><button type="button" onclick="nextPrev(-1)" class="default-btn prev-step">Back</button></li>
+                                          <!-- <li><button type="button" class="default-btn next-step skip-btn">Skip</button></li> -->
+                                          <li><button type="button" onclick="nextPrev(1)" class="default-btn next-step">Continue</button></li>
+                                      </ul>
+                                  </div>
+                                  <div class="tab-pane step" role="tabpanel" id="step4">
+                                    <h4 class="text-center">Step 4</h4>
+                                     <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Account Name *</label> 
+                                            <input class="form-control" type="text" name="name" placeholder=""> 
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Demo</label> 
+                                            <input class="form-control" type="text" name="name" placeholder=""> 
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Inout</label> 
+                                            <input class="form-control" type="text" name="name" placeholder=""> 
+                                        </div>
+                                    </div>
+                                    <!-- <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Information</label> 
+                                            <div class="custom-file">
+                                              <input type="file" class="custom-file-input" id="customFile">
+                                              <label class="custom-file-label" for="customFile">Select file</label>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Number *</label> 
+                                            <input class="form-control" type="text" name="name" placeholder=""> 
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>Input Number</label> 
+                                            <input class="form-control" type="text" name="name" placeholder=""> 
+                                        </div>
+                                    </div>
+                                       </div>
+                                    <ul class="list-inline pull-right">
+                                        <li><button type="button" onclick="nextPrev(-1)" class="default-btn prev-step">Back</button></li>
+                                        <!-- <li><button type="button" class="default-btn next-step skip-btn">Skip</button></li> -->
+                                        <li><button type="button" onclick="nextPrev(1)" class="default-btn next-step">Submit</button></li>
+                                    </ul>
+                                </div>
+                                  
+                                  <div class="clearfix"></div>
+                              </div>
+                              
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+    </div>
+      <!-- <div class="text">Dashboard</div> -->
+  </section>
+
+  <script>
+    var currentTab = 0; // Current tab is set to be the first tab (0)
+    showTab(currentTab); // Display the current tab
+    
+    function showTab(n) {
+      // This function will display the specified tab of the form...
+      var x = document.getElementsByClassName("tab-pane");
+      x[n].style.display = "block";
+      //... and fix the Previous/Next buttons:
+      if (n == 0) {
+        document.getElementById("prev-step").style.display = "none";
+      } else {
+        document.getElementById("prev-step").style.display = "inline";
+      }
+      if (n == (x.length - 1)) {
+        document.getElementById("next-step").innerHTML = "Submit";
+      } else {
+        document.getElementById("next-step").innerHTML = "Next";
+      }
+      //... and run a function that will display the correct step indicator:
+      fixStepIndicator(n)
+    }
+    
+    function nextPrev(n) {
+      // This function will figure out which tab to display
+      var x = document.getElementsByClassName("tab-pane");
+      // Exit the function if any field in the current tab is invalid:
+      if (n == 1 && !validateForm()) return false;
+      // Hide the current tab:
+      x[currentTab].style.display = "none";
+      // Increase or decrease the current tab by 1:
+      currentTab = currentTab + n;
+      // if you have reached the end of the form...
+      if (currentTab >= x.length) {
+        // ... the form gets submitted:
+        document.getElementById("main_form").submit();
+        return false;
+      }
+      // Otherwise, display the correct tab:
+      showTab(currentTab);
+    }
+    
+    function validateForm() {
+      // This function deals with validation of the form fields
+      var x, y, i, valid = true;
+      x = document.getElementsByClassName("tab-pane");
+      y = x[currentTab].getElementsByTagName("input");
+      // A loop that checks every input field in the current tab:
+      for (i = 0; i < y.length; i++) {
+        // If a field is empty...
+        if (y[i].value == "") {
+          // add an "invalid" class to the field:
+          y[i].className += " invalid";
+          // and set the current valid status to false
+          valid = false;
+        }
+      }
+      // If the valid status is true, mark the step as finished and valid:
+      if (valid) {
+        document.getElementsByClassName("step")[currentTab].className += " finish";
+      }
+      return valid; // return the valid status
+    }
+    
+    function fixStepIndicator(n) {
+      // This function removes the "active" class of all steps...
+      var i, x = document.getElementsByClassName("step");
+      for (i = 0; i < x.length; i++) {
+        x[i].className = x[i].className.replace(" active", "");
+      }
+      //... and adds the "active" class on the current step:
+      x[n].className += " active";
+    }
+    </script>
+  <script src="script.js"></script>
+
+</body>
+</html>
